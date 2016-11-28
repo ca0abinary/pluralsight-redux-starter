@@ -30,9 +30,7 @@ CoursesPage.propTypes = {
 };
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        courses: state.courses
-    };
+    return { courses: state.courses };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
