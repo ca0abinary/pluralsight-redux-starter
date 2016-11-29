@@ -28,7 +28,7 @@
     "toastr": "2.1.2"
   },
   "devDependencies": {
-    "babel-cli": "6.8.0",
+    "babel-cli": "^6.8.0",
     "babel-core": "6.8.0",
     "babel-loader": "6.2.4",
     "babel-plugin-react-display-name": "2.0.0",
@@ -36,6 +36,7 @@
     "babel-preset-react": "6.5.0",
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
+    "babel-types": "^6.19.0",
     "colors": "1.1.2",
     "compression": "1.6.1",
     "cross-env": "1.0.7",
@@ -51,6 +52,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "jsdom": "8.5.0",
+    "lodash": "^4.15",
     "mocha": "2.4.5",
     "nock": "8.0.0",
     "npm-run-all": "1.8.0",
