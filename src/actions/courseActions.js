@@ -1,5 +1,5 @@
 import * as types from './actionTypes';
-import {beginAjaxCall} from './ajaxStatusActions';
+import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 import courseApi from '../api/mockCourseApi';
 
 export function loadCoursesSuccess(courses) {
@@ -30,6 +30,9 @@ export function saveCourse(course) {
             .then(savedCourse => course.id
                 ? dispatch(updateCourseSuccess(savedCourse))
                 : dispatch(createCourseSuccess(savedCourse)))
-            .catch(error => { throw error; });
+            .catch(error => {
+                dispatch(ajaxCallError(error));
+                throw(error);
+            });
     }
 }

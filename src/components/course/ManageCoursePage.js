@@ -34,7 +34,11 @@ class ManageCoursePage extends Component {
     saveCourse(event) {
         this.setState({ saving: true });
         this.props.actions.saveCourse(this.state.course)
-            .then(() => this.redirect());
+            .then(() => this.redirect())
+            .catch((error) => {
+                let errors = Object.assign({}, this.state.errors, { title: error });
+                this.setState({ errors: errors, saving: false });
+            });
     }
 
     redirect() {
