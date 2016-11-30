@@ -2,6 +2,7 @@ import React, {Component,PropTypes} from 'react';
 import {browserHistory} from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import * as courseActions from '../../actions/courseActions';
 import CourseList from './CourseList';
@@ -23,6 +24,7 @@ class CoursesPage extends Component {
 
     render() {
         const { courses } = this.props;
+//                <Snackbar open={true} message="Course saved" autoHideDuration={4000} />
         return (
             <div>
                 <h1>Courses</h1>
