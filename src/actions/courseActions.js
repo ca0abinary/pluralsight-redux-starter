@@ -20,7 +20,7 @@ export function loadCourses() {
         return courseApi.getAllCourses()
             .then(courses => { dispatch(loadCoursesSuccess(courses)); })
             .catch(error => { throw(error); });
-    }
+    };
 }
 
 export function saveCourse(course) {
@@ -34,5 +34,5 @@ export function saveCourse(course) {
                 dispatch(ajaxCallError(error));
                 throw(error);
             });
-    }
+    };
 }

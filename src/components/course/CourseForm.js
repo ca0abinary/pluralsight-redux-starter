@@ -5,7 +5,7 @@ import SelectInput from '../common/SelectInput';
 
 const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
     return (
-        <div>
+        <form>
             <h1>Manage Course</h1>
             <TextInput name="title" label="Title" value={course.title} onChange={onChange} error={errors.title} />
             <br/>
@@ -16,7 +16,7 @@ const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
             <TextInput name="length" label="Length" value={course.length} onChange={onChange} error={errors.length} />
             <br/>
             <RaisedButton primary={true} disabled={saving} label={saving ? 'Saving...' : 'Save'} onClick={onSave} />
-        </div>
+        </form>
     );
 };
 
